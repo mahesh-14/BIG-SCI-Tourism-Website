@@ -1,0 +1,885 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    overflow-y: scroll;
+}
+
+body {
+    color: black;
+    font-size: 16px;
+    position: relative;
+    height: 100vh;
+    font-weight: 400;
+}
+
+.background {
+    background-image: url(img/red-fort-1200x800.webp);
+    background-size: cover;
+}
+
+
+/* NAVIGATION BAR */
+
+nav {
+    display: flex;
+    height: 80px;
+    width: 100%;
+    background: black;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px 0 10px;
+    flex-wrap: wrap;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    cursor: pointer;
+}
+
+nav .logo {
+    color: rgb(105, 186, 212);
+    font-size: 20px;
+    font-weight: 800;
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 5px;
+}
+
+nav ul li a {
+    color: #f2f2f2;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 8px 15px;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+nav ul li a.active,
+nav ul li a:hover {
+    color: black;
+    background: lightblue;
+}
+
+nav .menu-btn i {
+    color: #fff;
+    font-size: 22px;
+    cursor: pointer;
+    display: none;
+}
+
+.mainimage {
+    width: 100%;
+    height: 70vh;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+.mainimg {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    height: 600px;
+}
+
+p {
+    font-size: medium;
+}
+
+.form {
+    max-width: 62%;
+    margin: 25px auto;
+}
+
+.form-input {
+    margin: 14px 0;
+    padding: 5px 13px;
+    width: 100%;
+    font-size: 19px;
+    border: 2px solid grey;
+    border-radius: 6px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1 {
+    color: #111;
+}
+
+.text-center {
+    text-align: center;
+    padding-top: 40px;
+    font-size: x-large;
+}
+
+
+/*IMAGE SLIDER*/
+
+#slider {
+    width: 100%;
+    height: 600px;
+    position: relative;
+    overflow: hidden;
+}
+
+@keyframes load {
+    from {
+        left: -100%;
+    }
+    to {
+        left: 0;
+    }
+}
+
+.slides {
+    width: 400%;
+    height: 100%;
+    position: relative;
+    -webkit-animation: slide 30s infinite;
+    -moz-animation: slide 30s infinite;
+    animation: slide 30s infinite;
+}
+
+.slider {
+    width: 25%;
+    height: 100%;
+    float: left;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+}
+
+.image {
+    width: 100%;
+    height: 100%;
+}
+
+.image img {
+    width: 100%;
+    height: 100%;
+}
+
+
+/* Legend */
+
+.legend {
+    border: 500px solid transparent;
+    border-left: 800px solid rgba(52, 73, 94, .7);
+    border-bottom: 0;
+    position: absolute;
+    bottom: 0;
+}
+
+
+/* Contents */
+
+.content {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    overflow: hidden;
+}
+
+.content-txt {
+    width: 400px;
+    height: 150px;
+    float: left;
+    position: relative;
+    top: 300px;
+    -webkit-animation: content-s 7.5s infinite;
+    -moz-animation: content-s 7.5s infinite;
+    animation: content-s 7.5s infinite;
+}
+
+.content-txt h2 {
+    font-family: Arial;
+    text-transform: uppercase;
+    font-size: 24px;
+    color: #fff;
+    text-align: left;
+    margin-left: 30px;
+    padding-bottom: 10px;
+}
+
+.content-txt p {
+    font-weight: normal;
+    font-size: 14px;
+    color: #fff;
+    text-align: left;
+    margin-left: 30px;
+}
+
+@-webkit-keyframes slide {
+    0%,
+    100% {
+        margin-left: 0%;
+    }
+    21% {
+        margin-left: 0%;
+    }
+    25% {
+        margin-left: -100%;
+    }
+    46% {
+        margin-left: -100%;
+    }
+    50% {
+        margin-left: -200%;
+    }
+    71% {
+        margin-left: -200%;
+    }
+    75% {
+        margin-left: -300%;
+    }
+    96% {
+        margin-left: -300%;
+    }
+}
+
+@-moz-keyframes slide {
+    0%,
+    100% {
+        margin-left: 0%;
+    }
+    21% {
+        margin-left: 0%;
+    }
+    25% {
+        margin-left: -100%;
+    }
+    46% {
+        margin-left: -100%;
+    }
+    50% {
+        margin-left: -200%;
+    }
+    71% {
+        margin-left: -200%;
+    }
+    75% {
+        margin-left: -300%;
+    }
+    96% {
+        margin-left: -300%;
+    }
+}
+
+@keyframes slide {
+    0%,
+    100% {
+        margin-left: 0%;
+    }
+    21% {
+        margin-left: 0%;
+    }
+    25% {
+        margin-left: -100%;
+    }
+    46% {
+        margin-left: -100%;
+    }
+    50% {
+        margin-left: -200%;
+    }
+    71% {
+        margin-left: -200%;
+    }
+    75% {
+        margin-left: -300%;
+    }
+    96% {
+        margin-left: -300%;
+    }
+}
+
+@-webkit-keyframes content-s {
+    0% {
+        left: -420px;
+    }
+    10% {
+        left: 0px;
+    }
+    30% {
+        left: 0px;
+    }
+    40% {
+        left: 0px;
+    }
+    50% {
+        left: 0px;
+    }
+    60% {
+        left: 0px;
+    }
+    70% {
+        left: 0;
+    }
+    80% {
+        left: -420px;
+    }
+    90% {
+        left: -420px;
+    }
+    100% {
+        left: -420px;
+    }
+}
+
+@-moz-keyframes content-s {
+    0% {
+        left: -420px;
+    }
+    10% {
+        left: 0px;
+    }
+    30% {
+        left: 0px;
+    }
+    40% {
+        left: 0px;
+    }
+    50% {
+        left: 0px;
+    }
+    60% {
+        left: 0px;
+    }
+    70% {
+        left: 0;
+    }
+    80% {
+        left: -420px;
+    }
+    90% {
+        left: -420px;
+    }
+    100% {
+        left: -420px;
+    }
+}
+
+@keyframes content-s {
+    0% {
+        left: -420px;
+    }
+    10% {
+        left: 20px;
+    }
+    15% {
+        left: 0px;
+    }
+    30% {
+        left: 0px;
+    }
+    40% {
+        left: 0px;
+    }
+    50% {
+        left: 0px;
+    }
+    60% {
+        left: 0px;
+    }
+    70% {
+        left: 0;
+    }
+    80% {
+        left: -420px;
+    }
+    90% {
+        left: -420px;
+    }
+    100% {
+        left: -420px;
+    }
+}
+
+@-webkit-keyframes on {
+    0%,
+    100% {
+        margin-left: 0%;
+    }
+    21% {
+        margin-left: 0%;
+    }
+    25% {
+        margin-left: 15px;
+    }
+    46% {
+        margin-left: 15px;
+    }
+    50% {
+        margin-left: 30px;
+    }
+    71% {
+        margin-left: 30px;
+    }
+    75% {
+        margin-left: 45px;
+    }
+    96% {
+        margin-left: 45px;
+    }
+}
+
+@-moz-keyframes on {
+    0%,
+    100% {
+        margin-left: 0%;
+    }
+    21% {
+        margin-left: 0%;
+    }
+    25% {
+        margin-left: 15px;
+    }
+    46% {
+        margin-left: 15px;
+    }
+    50% {
+        margin-left: 30px;
+    }
+    71% {
+        margin-left: 30px;
+    }
+    75% {
+        margin-left: 45px;
+    }
+    96% {
+        margin-left: 45px;
+    }
+}
+
+@keyframes on {
+    0%,
+    100% {
+        margin-left: 0%;
+    }
+    21% {
+        margin-left: 0%;
+    }
+    25% {
+        margin-left: 15px;
+    }
+    46% {
+        margin-left: 15px;
+    }
+    50% {
+        margin-left: 30px;
+    }
+    71% {
+        margin-left: 30px;
+    }
+    75% {
+        margin-left: 45px;
+    }
+    96% {
+        margin-left: 45px;
+    }
+}
+
+
+/* Flip Card */
+
+.cardBox {
+    float: left;
+    font-size: 1.2em;
+    margin: 1% 0 0 1%;
+    perspective: 800px;
+    transition: all 0.3s ease 0s;
+    width: 23.7%;
+}
+
+.cardBox:hover .card {
+    transform: rotateY( 180deg);
+}
+
+.card {
+    background: rgb(255, 255, 255);
+    cursor: default;
+    height: 300px;
+    transform-style: preserve-3d;
+    transition: transform 0.4s ease 0s;
+    width: 100%;
+    -webkit-animation: giro 1s 1;
+    animation: giro 1s 1;
+}
+
+.card p {
+    margin-bottom: 1.8em;
+}
+
+.card .front,
+.card .back {
+    backface-visibility: hidden;
+    box-sizing: border-box;
+    color: black;
+    display: block;
+    font-size: 1.2em;
+    height: 100%;
+    padding: 0.8em;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+}
+
+.card .front strong {
+    background: rgb(250, 249, 249);
+    border-radius: 100%;
+    color: #222;
+    font-size: 1.5em;
+    line-height: 30px;
+    padding: 0 7px 4px 6px;
+}
+
+.card .back {
+    transform: rotateY( 180deg);
+}
+
+.card .back a {
+    padding: 0.3em 0.5em;
+    background: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 1px;
+    font-size: 0.9em;
+    transition: all 0.2s ease 0s;
+}
+
+.card .back a:hover {
+    background: #fff;
+    color: #333;
+    text-shadow: 0 0 1px #333;
+}
+
+.cardBox:nth-child(1) .card .back {
+    background: cornflowerblue;
+}
+
+.cardBox:nth-child(2) .card .back {
+    background: orange;
+}
+
+.cardBox:nth-child(3) .card .back {
+    background: yellowgreen;
+}
+
+.cardBox:nth-child(4) .card .back {
+    background: tomato;
+}
+
+.cardBox:nth-child(5) .card .back {
+    background: blue;
+}
+
+.cardBox:nth-child(6) .card .back {
+    background: tomato;
+}
+
+.cardBox:nth-child(7) .card .back {
+    background: rgb(11, 155, 83);
+}
+
+.cardBox:nth-child(8) .card .back {
+    background: rgb(182, 25, 161);
+}
+
+.cardBox:nth-child(9) .card .back {
+    background: rgb(223, 136, 7);
+}
+
+.cardBox:nth-child(10) .card .back {
+    background: rgb(223, 68, 163);
+}
+
+.cardBox:nth-child(11) .card .back {
+    background: rgb(228, 252, 17);
+}
+
+.cardBox:nth-child(12) .card .back {
+    background: rgb(29, 195, 207);
+}
+
+.cardBox:nth-child(2) .card {
+    -webkit-animation: giro 1.5s 1;
+    animation: giro 1.5s 1;
+}
+
+.cardBox:nth-child(3) .card {
+    -webkit-animation: giro 2s 1;
+    animation: giro 2s 1;
+}
+
+.cardBox:nth-child(4) .card {
+    -webkit-animation: giro 2.5s 1;
+    animation: giro 2.5s 1;
+}
+
+@-webkit-keyframes giro {
+    from {
+        transform: rotateY( 180deg);
+    }
+    to {
+        transform: rotateY( 0deg);
+    }
+}
+
+@keyframes giro {
+    from {
+        transform: rotateY( 180deg);
+    }
+    to {
+        transform: rotateY( 0deg);
+    }
+}
+
+
+/* INFO PAGE CSS */
+
+.info-background {
+    background-image: url(img/background.jpg);
+    background-size: cover;
+}
+
+.faq-heading {
+    text-align: center;
+    text-decoration: underline;
+    color: black;
+    font-size: 40px
+}
+
+.faq-box {
+    width: 80%;
+    height: 80vh;
+    margin: auto;
+    margin-top: 20px;
+    background-color: white;
+    border-radius: 20px;
+    border: 2px black;
+}
+
+.accordion {
+    padding: 5px 20px;
+}
+
+.accordion-item {
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+.accordion a {
+    width: 100%;
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: black;
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+.answer {
+    max-height: 0;
+    margin-top: 10px;
+    max-height: 0;
+    overflow: hidden;
+    color: limegreen;
+    font-size: 1.1rem;
+    font-weight: 600;
+    position: relative;
+    transition: max-height 650ms;
+}
+
+.answer::before {
+    position: absolute;
+    height: 90%;
+    width: .6rem;
+    background-color: lime;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+.accordion-item:target .answer {
+    max-height: 20rem;
+}
+
+
+/* MEDIA QUERY */
+
+@media (max-width: 990px) {
+    nav .menu-btn i {
+        display: block;
+    }
+    #click:checked~.menu-btn i:before {
+        content: "\f00d";
+    }
+    nav ul {
+        position: fixed;
+        top: 80px;
+        left: -100%;
+        background: #111;
+        height: 100vh;
+        width: 100%;
+        text-align: center;
+        display: block;
+        transition: all 0.3s ease;
+    }
+    #click:checked~ul {
+        left: 0;
+    }
+    nav ul li {
+        width: 100%;
+        margin: 40px 0;
+    }
+    nav ul li a {
+        width: 100%;
+        margin-left: -100%;
+        display: block;
+        font-size: 20px;
+        transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+    #click:checked~ul li a {
+        margin-left: 0px;
+    }
+    nav ul li a.active,
+    nav ul li a:hover {
+        background: none;
+        color: darkturquoise;
+    }
+    h3 {
+        text-align: center;
+        width: 100%;
+    }
+    .small-heading {
+        font-size: 2rem;
+        text-align: center;
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .left-container {
+        height: auto !important;
+    }
+    .right-container {
+        height: auto !important;
+    }
+    .details-container {
+        margin: 0;
+    }
+    .resources-container {
+        margin: 0;
+    }
+    .col-lg-5 {
+        margin-top: 15px;
+    }
+    .country-select {
+        margin-top: 14px;
+    }
+    .active-cases {
+        width: 100%;
+    }
+    .faq-box {
+        height: max-content;
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    .card img {
+        size: 80px;
+    }
+    p {
+        font-size: small;
+    }
+}
+
+@media screen and (max-width: 820px) {
+    .navbar {
+        width: 100%;
+    }
+    .mainimg {
+        flex-direction: column;
+    }
+    .cardBox {
+        margin-left: 2.8%;
+        margin-top: 3%;
+        width: 46%;
+    }
+    .card {
+        height: 285px;
+    }
+    .cardBox:last-child {
+        margin-bottom: 3%;
+    }
+    p {
+        font-size: small;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .mainimg {
+        flex-direction: column;
+    }
+    .navbar {
+        margin-right: 10px;
+        width: 100%;
+    }
+    nav ul {
+        height: 100vh;
+    }
+    .cardBox {
+        width: 94.5%;
+        padding-left: 10px 10px;
+    }
+    .card {
+        height: 260px;
+    }
+    p {
+        font-size: 14px;
+        font-weight: 600;
+    }
+    h3 {
+        font-size: 20px;
+    }
+    .content-txt p {
+        font-weight: normal;
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .navbar {
+        width: 100%;
+    }
+    .mainimg {
+        margin-right: 10px;
+        padding-left: 10px;
+    }
+    .boxesContainer {
+        padding-left: 10px;
+    }
+}
