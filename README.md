@@ -4,7 +4,7 @@ Created by Ramnathan Yogaswarar (Roll No.27) &amp; Mahesh Dravidar (Roll No.04) 
 
 
 
-Its's a fully responsive website which can be viewed across various devices  
+It is a fully responsive website which can be viewed across various devices  
 
 
 
